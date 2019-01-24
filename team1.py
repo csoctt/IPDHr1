@@ -7,7 +7,7 @@
 ####
 
 team_name = 'Cameron Scotts Team' # Only 10 chars displayed.
-strategy_name = 'Collude until betrayed'
+strategy_name = 'Collude but retaliate'
 strategy_description = 'This strategy colludes until its betrayed'
     
 def move(my_history, their_history, my_score, their_score):
@@ -31,6 +31,12 @@ def move(my_history, their_history, my_score, their_score):
     elif my_history[-1]=='c' and their_history[-1]=='b':
         return 'b'
     elif my_history[-1]=='b' and their_history[-1]=='b':
+        return 'b'
+    elif len(my_history)==50:
+        return 'b'
+    elif len(my_history)==100:
+        return 'b'
+    elif len(my_history)==150:
         return 'b'
     else:
         return 'c'
